@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medimax BD | Products</title>
+    <meta name="description" content="Explore Medimax BD's premium medical & healthcare equipment in Bangladesh.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- custom css -->
+     <link rel="stylesheet" href="asset/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Mobile Category Sidebar (Hidden by default) -->
+    <div class="mobile-category-sidebar" id="mobileCategorySidebar">
+        <div class="mobile-category-header">
+            <h5 class="mb-0">Product Categories</h5>
+            <button class="close-categories" id="closeCategories">&times;</button>
+        </div>
+
+        <div class="mobile-category-list">
+            <button class="btn btn-primary w-100 mb-3 all-products-btn-mobile" data-category="all">
+                View All Products
+            </button>
+
+            <div class="mb-4">
+                <h6 class="fw-bold">Equipments</h6>
+                <ul class="mb-3">
+                    <li><a class="category-link-mobile" data-category="medical-equipment">Medical Equipment</a></li>
+                    <li><a class="category-link-mobile" data-category="surgical-ot-table">Surgical OT Table</a></li>
+                    <li><a class="category-link-mobile" data-category="led-surgical-light">LED Surgical Light</a></li>
+                    <li><a class="category-link-mobile" data-category="infant-care-equipment">Infant Care Equipment</a>
+                    </li>
+                    <li><a class="category-link-mobile" data-category="radiation-protection">Radiation Protection</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h6 class="fw-bold">Medical Furniture</h6>
+                <ul>
+                    <li><a class="category-link-mobile" data-category="hospital-bed">Hospital Bed</a></li>
+                    <li><a class="category-link-mobile" data-category="wheel-chair">Wheel Chair</a></li>
+                    <li><a class="category-link-mobile" data-category="walker">Walker</a></li>
+                    <li><a class="category-link-mobile" data-category="crutch-stick">Crutch & Stick</a></li>
+                    <li><a class="category-link-mobile" data-category="stretcher-trolley">Stretcher Trolley</a></li>
+                    <li><a class="category-link-mobile" data-category="patient-transfer-trolley">Patient Transfer
+                            Trolley</a></li>
+                    <li><a class="category-link-mobile" data-category="hospital-furniture">Hospital Furniture</a></li>
+                    <li><a class="category-link-mobile" data-category="steel-furniture">Steel Furniture</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="overlay" id="sidebarOverlay"></div>
+
+    <!-- COMPLETE NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="asset/images/logo.svg" alt="Medimax BD Logo" height="50" class="me-2 logo-white">
+                Medimax BD
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Our Products</h1>
+            <p class="lead">Browse medical equipment by category</p>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+
+                <!-- LEFT SIDEBAR - CATEGORIES (Desktop) -->
+                <div class="col-lg-3 mb-4">
+                    <div class="category-list desktop">
+                        <h5 class="mb-4">Select Category</h5>
+
+                        <button class="btn btn-primary w-100 mb-3 all-products-btn" data-category="all">
+                            View All Products
+                        </button>
+
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Equipments</h6>
+                            <ul class="mb-3">
+                                <li><a class="category-link" data-category="medical-equipment">Medical Equipment</a>
+                                </li>
+                                <li><a class="category-link" data-category="surgical-ot-table">Surgical OT Table</a>
+                                </li>
+                                <li><a class="category-link" data-category="led-surgical-light">LED Surgical Light</a>
+                                </li>
+                                <li><a class="category-link" data-category="infant-care-equipment">Infant Care
+                                        Equipment</a></li>
+                                <li><a class="category-link" data-category="radiation-protection">Radiation
+                                        Protection</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold">Medical Furniture</h6>
+                            <ul>
+                                <li><a class="category-link" data-category="hospital-bed">Hospital Bed</a></li>
+                                <li><a class="category-link" data-category="wheel-chair">Wheel Chair</a></li>
+                                <li><a class="category-link" data-category="walker">Walker</a></li>
+                                <li><a class="category-link" data-category="crutch-stick">Crutch & Stick</a></li>
+                                <li><a class="category-link" data-category="stretcher-trolley">Stretcher Trolley</a>
+                                </li>
+                                <li><a class="category-link" data-category="patient-transfer-trolley">Patient Transfer
+                                        Trolley</a></li>
+                                <li><a class="category-link" data-category="hospital-furniture">Hospital Furniture</a>
+                                </li>
+                                <li><a class="category-link" data-category="steel-furniture">Steel Furniture</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT PRODUCTS AREA -->
+                <div class="col-lg-9">
+
+                    <!-- Mobile Category Toggle Button -->
+                    <button class="mobile-category-toggle" id="mobileCategoryToggle">
+                        <span>Browse Categories</span>
+                        <span class="toggle-icon">▼</span>
+                    </button>
+
+                    <!-- Active Category Indicator -->
+                    <div id="activeCategoryIndicator" class="active-category-indicator">
+                        Showing: <span id="currentCategory">All Products</span>
+                    </div>
+
+                    <!-- Products per page selector -->
+                    <div class="products-per-page">
+                        <label for="itemsPerPage">Products per page:</label>
+                        <select id="itemsPerPage">
+                            <option value="8">8</option>
+                            <option value="12" selected>12</option>
+                            <option value="16">16</option>
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                        </select>
+                    </div>
+
+                    <!-- ALL PRODUCTS (Initially shown) -->
+                    <div id="all-products" class="product-section">
+                        <!-- Products will be dynamically loaded here -->
+                        <div id="all-products-container" class="row g-4"></div>
+                    </div>
+
+                    <!-- INDIVIDUAL CATEGORY VIEW (Initially hidden) -->
+                    <div id="category-view" class="product-section hidden">
+                        <div id="filtered-products" class="row g-4"></div>
+                        <div id="no-products-message" class="text-center py-5 hidden">
+                            <h5>No products found in this category.</h5>
+                            <p class="text-muted">Please check back later or explore other categories.</p>
+                            <button class="btn btn-primary mt-3" data-category="all">View All Products</button>
+                        </div>
+                    </div>
+
+                    <!-- Pagination Section -->
+                    <div id="pagination-container" class="pagination-container">
+                        <nav aria-label="Product pagination">
+                            <ul id="pagination" class="pagination">
+                                <!-- Pagination links will be dynamically generated here -->
+                            </ul>
+                            <div id="pagination-info" class="pagination-info">
+                                <!-- Pagination info will be displayed here -->
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center">
+        <div class="container">
+            <img src="asset/images/logo.svg" alt="Medimax BD Logo" height="50" class="me-2 logo-white">
+            <p class="fw-bold mb-1">Medimax BD</p>
+            <p class="mb-0">Quality Equipment. Expert Support. Complete Care.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pagination variables
+            let currentPage = 1;
+            let itemsPerPage = parseInt(document.getElementById('itemsPerPage').value);
+            let totalProducts = 0;
+            let currentCategory = 'all';
+
+            // Mobile category toggle elements
+            const mobileCategoryToggle = document.getElementById('mobileCategoryToggle');
+            const mobileCategorySidebar = document.getElementById('mobileCategorySidebar');
+            const closeCategories = document.getElementById('closeCategories');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+            // Category filtering functionality
+            const categoryLinks = document.querySelectorAll('.category-link');
+            const categoryLinksMobile = document.querySelectorAll('.category-link-mobile');
+            const allProductsBtn = document.querySelector('.all-products-btn');
+            const allProductsBtnMobile = document.querySelector('.all-products-btn-mobile');
+            const allProductsSection = document.getElementById('all-products');
+            const allProductsContainer = document.getElementById('all-products-container');
+            const categoryViewSection = document.getElementById('category-view');
+            const filteredProductsContainer = document.getElementById('filtered-products');
+            const noProductsMessage = document.getElementById('no-products-message');
+            const currentCategorySpan = document.getElementById('currentCategory');
+            const paginationContainer = document.getElementById('pagination');
+            const paginationInfo = document.getElementById('pagination-info');
+            const itemsPerPageSelect = document.getElementById('itemsPerPage');
+
+            // Sample product data (extended for pagination demo)
+            const products = [
+                // Medical Equipment (20 items)
+                { id: 1, name: "Oxygen Concentrator", category: "medical-equipment", image: "asset/images/Oxygen Concentrator.jpeg" },
+                { id: 2, name: "Suction Machine", category: "medical-equipment", image: "asset/images/Suction Machine.jpeg" },
+                { id: 3, name: "Patient Monitor", category: "medical-equipment", image: "asset/images/Patient Monitor.jpeg" },
+                { id: 4, name: "Ventilator", category: "medical-equipment", image: "asset/images/Ventilator.jpeg" },
+                { id: 5, name: "Infusion Pump", category: "medical-equipment", image: "asset/images/products/Infusion Pump.jpeg" },
+                { id: 6, name: "Defibrillator", category: "medical-equipment", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400" },
+                { id: 7, name: "ECG Machine", category: "medical-equipment", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400" },
+                { id: 8, name: "Ultrasound Machine", category: "medical-equipment", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400" },
+                { id: 9, name: "X-Ray Machine", category: "medical-equipment", image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400" },
+                { id: 10, name: "Anesthesia Machine", category: "medical-equipment", image: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" },
+
+                // Hospital Furniture (15 items)
+                { id: 11, name: "Hospital Bed", category: "hospital-bed", image: "https://images.unsplash.com/photo-1604014239782-7985dfb4ed3d?w=400" },
+                { id: 12, name: "Electric Hospital Bed", category: "hospital-bed", image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400" },
+                { id: 13, name: "ICU Bed", category: "hospital-bed", image: "https://images.unsplash.com/photo-1580281657521-8c6dcd9f5f1c?w=400" },
+                { id: 14, name: "Wheel Chair", category: "wheel-chair", image: "https://images.unsplash.com/photo-1582719478185-2f2b16d8a42a?w=400" },
+                { id: 15, name: "Electric Wheel Chair", category: "wheel-chair", image: "https://images.unsplash.com/photo-1612882529463-3787f5c18e0c?w=400" },
+                { id: 16, name: "Patient Trolley", category: "stretcher-trolley", image: "https://images.unsplash.com/photo-1612349317688-7c2fbd2c6741?w=400" },
+                { id: 17, name: "Stretcher Trolley", category: "stretcher-trolley", image: "https://images.unsplash.com/photo-1600959907703-125ba1374a12?w=400" },
+                { id: 18, name: "Emergency Trolley", category: "stretcher-trolley", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400" },
+                { id: 19, name: "Medical Walker", category: "walker", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400" },
+                { id: 20, name: "Rollator Walker", category: "walker", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400" },
+
+                // Surgical Equipment (10 items)
+                { id: 21, name: "Surgical OT Table", category: "surgical-ot-table", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400" },
+                { id: 22, name: "Hydraulic OT Table", category: "surgical-ot-table", image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400" },
+                { id: 23, name: "LED Surgical Light", category: "led-surgical-light", image: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=400" },
+                { id: 24, name: "Halogen Surgical Light", category: "led-surgical-light", image: "https://images.unsplash.com/photo-1604014239782-7985dfb4ed3d?w=400" },
+                { id: 25, name: "Infant Warmer", category: "infant-care-equipment", image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400" },
+                { id: 26, name: "Infant Incubator", category: "infant-care-equipment", image: "https://images.unsplash.com/photo-1580281657521-8c6dcd9f5f1c?w=400" },
+                { id: 27, name: "Radiation Protection Apron", category: "radiation-protection", image: "https://images.unsplash.com/photo-1582719478185-2f2b16d8a42a?w=400" },
+                { id: 28, name: "Lead Gloves", category: "radiation-protection", image: "https://images.unsplash.com/photo-1612882529463-3787f5c18e0c?w=400" },
+                { id: 29, name: "Crutch Set", category: "crutch-stick", image: "https://images.unsplash.com/photo-1612349317688-7c2fbd2c6741?w=400" },
+                { id: 30, name: "Adjustable Crutch", category: "crutch-stick", image: "https://images.unsplash.com/photo-1600959907703-125ba1374a12?w=400" },
+
+                // Additional products
+                { id: 31, name: "Patient Transfer Trolley", category: "patient-transfer-trolley", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400" },
+                { id: 32, name: "Examination Table", category: "hospital-furniture", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400" },
+                { id: 33, name: "Medicine Cabinet", category: "steel-furniture", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400" },
+                { id: 34, name: "Instrument Trolley", category: "steel-furniture", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400" },
+                { id: 35, name: "Doctor's Desk", category: "hospital-furniture", image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=400" }
+            ];
+
+            // Category display names
+            const categoryNames = {
+                'all': 'All Products',
+                'medical-equipment': 'Medical Equipment',
+                'surgical-ot-table': 'Surgical OT Table',
+                'led-surgical-light': 'LED Surgical Light',
+                'infant-care-equipment': 'Infant Care Equipment',
+                'radiation-protection': 'Radiation Protection',
+                'hospital-bed': 'Hospital Bed',
+                'wheel-chair': 'Wheel Chair',
+                'walker': 'Walker',
+                'crutch-stick': 'Crutch & Stick',
+                'stretcher-trolley': 'Stretcher Trolley',
+                'patient-transfer-trolley': 'Patient Transfer Trolley',
+                'hospital-furniture': 'Hospital Furniture',
+                'steel-furniture': 'Steel Furniture'
+            };
+
+            // Mobile category toggle functionality
+            mobileCategoryToggle.addEventListener('click', function () {
+                mobileCategorySidebar.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+
+            closeCategories.addEventListener('click', function () {
+                closeMobileSidebar();
+            });
+
+            sidebarOverlay.addEventListener('click', function () {
+                closeMobileSidebar();
+            });
+
+            function closeMobileSidebar() {
+                mobileCategorySidebar.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+
+            // Function to filter products by category
+            function filterProductsByCategory(category) {
+                currentCategory = category;
+                currentPage = 1; // Reset to first page when category changes
+
+                // Update active category indicator
+                currentCategorySpan.textContent = categoryNames[category];
+
+                // Update active state in sidebar (desktop)
+                categoryLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.category === category) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Update active state in sidebar (mobile)
+                categoryLinksMobile.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.category === category) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Close mobile sidebar after selection
+                if (window.innerWidth <= 992) {
+                    closeMobileSidebar();
+                }
+
+                // Show/hide sections
+                if (category === 'all') {
+                    allProductsSection.classList.remove('hidden');
+                    categoryViewSection.classList.add('hidden');
+                    renderProducts(products, allProductsContainer);
+                } else {
+                    // Show category view
+                    allProductsSection.classList.add('hidden');
+                    categoryViewSection.classList.remove('hidden');
+
+                    // Filter products
+                    const filteredProducts = products.filter(product => product.category === category);
+
+                    // Show message if no products
+                    if (filteredProducts.length === 0) {
+                        noProductsMessage.classList.remove('hidden');
+                        filteredProductsContainer.innerHTML = '';
+                        renderPaginationControls(0);
+                        paginationInfo.textContent = '';
+                    } else {
+                        noProductsMessage.classList.add('hidden');
+                        renderProducts(filteredProducts, filteredProductsContainer);
+                    }
+                }
+            }
+
+            // Function to render products with pagination
+            function renderProducts(productList, container) {
+                totalProducts = productList.length;
+
+                // Calculate pagination
+                const totalPages = Math.ceil(totalProducts / itemsPerPage);
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const paginatedProducts = productList.slice(startIndex, endIndex);
+
+                // Clear container
+                container.innerHTML = '';
+
+                // Display paginated products
+                paginatedProducts.forEach(product => {
+                    const productCard = createProductCard(product);
+                    container.appendChild(productCard);
+                });
+
+                // Render pagination controls
+                renderPaginationControls(totalPages);
+
+                // Update pagination info
+                updatePaginationInfo(productList.length);
+            }
+
+            // Function to create product card
+            function createProductCard(product) {
+                const col = document.createElement('div');
+                col.className = 'col-lg-3 col-md-4 col-sm-6';
+
+                col.innerHTML = `
+                <div class="card h-100">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="card-body text-center">
+                        <h6>${product.name}</h6>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+                            <a href="#" class="btn btn-primary btn-sm">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                return col;
+            }
+
+            // Function to render pagination controls
+            function renderPaginationControls(totalPages) {
+                paginationContainer.innerHTML = '';
+
+                if (totalPages <= 1) {
+                    return; // Don't show pagination if only one page
+                }
+
+                // Previous button
+                const prevLi = document.createElement('li');
+                prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+                prevLi.innerHTML = `
+                <a class="page-link" href="#" aria-label="Previous" data-page="${currentPage - 1}">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            `;
+                paginationContainer.appendChild(prevLi);
+
+                // Page number buttons
+                const maxVisiblePages = 5;
+                let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+                let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+                // Adjust start page if we're near the end
+                if (endPage - startPage + 1 < maxVisiblePages) {
+                    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+                }
+
+                // First page
+                if (startPage > 1) {
+                    const firstLi = document.createElement('li');
+                    firstLi.className = 'page-item';
+                    firstLi.innerHTML = `<a class="page-link" href="#" data-page="1">1</a>`;
+                    paginationContainer.appendChild(firstLi);
+
+                    if (startPage > 2) {
+                        const ellipsisLi = document.createElement('li');
+                        ellipsisLi.className = 'page-item disabled';
+                        ellipsisLi.innerHTML = `<span class="page-link">...</span>`;
+                        paginationContainer.appendChild(ellipsisLi);
+                    }
+                }
+
+                // Page numbers
+                for (let i = startPage; i <= endPage; i++) {
+                    const pageLi = document.createElement('li');
+                    pageLi.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    pageLi.innerHTML = `<a class="page-link" href="#" data-page="${i}">${i}</a>`;
+                    paginationContainer.appendChild(pageLi);
+                }
+
+                // Last page
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        const ellipsisLi = document.createElement('li');
+                        ellipsisLi.className = 'page-item disabled';
+                        ellipsisLi.innerHTML = `<span class="page-link">...</span>`;
+                        paginationContainer.appendChild(ellipsisLi);
+                    }
+
+                    const lastLi = document.createElement('li');
+                    lastLi.className = 'page-item';
+                    lastLi.innerHTML = `<a class="page-link" href="#" data-page="${totalPages}">${totalPages}</a>`;
+                    paginationContainer.appendChild(lastLi);
+                }
+
+                // Next button
+                const nextLi = document.createElement('li');
+                nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+                nextLi.innerHTML = `
+                <a class="page-link" href="#" aria-label="Next" data-page="${currentPage + 1}">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            `;
+                paginationContainer.appendChild(nextLi);
+
+                // Add event listeners to pagination links
+                document.querySelectorAll('.page-link').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        if (this.getAttribute('data-page')) {
+                            const page = parseInt(this.getAttribute('data-page'));
+                            if (page !== currentPage) {
+                                currentPage = page;
+                                refreshProductsView();
+
+                                // Smooth scroll to top of products
+                                document.querySelector('.section-padding').scrollIntoView({
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Function to update pagination info
+            function updatePaginationInfo(totalItems) {
+                const startIndex = (currentPage - 1) * itemsPerPage + 1;
+                const endIndex = Math.min(currentPage * itemsPerPage, totalItems);
+
+                paginationInfo.textContent = `Showing ${startIndex} to ${endIndex} of ${totalItems} products`;
+            }
+
+            // Function to refresh products view based on current category and page
+            function refreshProductsView() {
+                if (currentCategory === 'all') {
+                    renderProducts(products, allProductsContainer);
+                } else {
+                    const filteredProducts = products.filter(product => product.category === currentCategory);
+                    if (filteredProducts.length === 0) {
+                        noProductsMessage.classList.remove('hidden');
+                        filteredProductsContainer.innerHTML = '';
+                        renderPaginationControls(0);
+                        paginationInfo.textContent = '';
+                    } else {
+                        noProductsMessage.classList.add('hidden');
+                        renderProducts(filteredProducts, filteredProductsContainer);
+                    }
+                }
+            }
+
+            // Event listeners for category links (desktop)
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const category = this.dataset.category;
+                    filterProductsByCategory(category);
+                });
+            });
+
+            // Event listeners for category links (mobile)
+            categoryLinksMobile.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const category = this.dataset.category;
+                    filterProductsByCategory(category);
+                });
+            });
+
+            // Event listener for "View All Products" button (desktop)
+            allProductsBtn.addEventListener('click', function () {
+                filterProductsByCategory('all');
+                categoryLinks.forEach(link => link.classList.remove('active'));
+                categoryLinksMobile.forEach(link => link.classList.remove('active'));
+            });
+
+            // Event listener for "View All Products" button (mobile)
+            allProductsBtnMobile.addEventListener('click', function () {
+                filterProductsByCategory('all');
+                categoryLinks.forEach(link => link.classList.remove('active'));
+                categoryLinksMobile.forEach(link => link.classList.remove('active'));
+            });
+
+            // Event listener for items per page change
+            itemsPerPageSelect.addEventListener('change', function () {
+                itemsPerPage = parseInt(this.value);
+                currentPage = 1; // Reset to first page when changing items per page
+                refreshProductsView();
+            });
+
+            // Close mobile sidebar when clicking Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMobileSidebar();
+                }
+            });
+
+            // Initialize with all products view
+            filterProductsByCategory('all');
+
+            // URL parameter handling (optional - allows linking directly to categories)
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam && categoryNames[categoryParam]) {
+                filterProductsByCategory(categoryParam);
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
